@@ -1,13 +1,20 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { HandGesture } from './hand-gesture.service';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {AsyncPipe} from "@angular/common";
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    AsyncPipe,
+    MatSidenavModule,
+    RouterOutlet
+  ]
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('video') video: ElementRef<HTMLVideoElement>;
