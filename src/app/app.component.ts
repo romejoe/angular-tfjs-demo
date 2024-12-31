@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import {Router, RouterOutlet} from '@angular/router';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { HandGesture } from './hand-gesture.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -13,7 +13,8 @@ import {AsyncPipe} from "@angular/common";
   imports: [
     AsyncPipe,
     MatSidenavModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterLink
   ]
 })
 export class AppComponent implements AfterViewInit {
