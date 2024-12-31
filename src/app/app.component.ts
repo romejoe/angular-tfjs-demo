@@ -4,9 +4,10 @@ import { filter, map, withLatestFrom } from 'rxjs/operators';
 import { HandGesture } from './hand-gesture.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('video') video: ElementRef<HTMLVideoElement>;
