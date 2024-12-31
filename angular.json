@@ -115,7 +115,6 @@
       }
     }
   },
-  "defaultProject": "ng-tfjs-demo",
   "cli": {
     "analytics": "33ba19cd-ea29-4d15-9be7-ad65c1820b65"
   }
